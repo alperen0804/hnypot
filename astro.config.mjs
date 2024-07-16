@@ -3,15 +3,13 @@ import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import cloudflare from "@astrojs/cloudflare";
 import node from "@astrojs/node";
-
 import tailwind from "@astrojs/tailwind";
+
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://hnypot.dev',
   integrations: [mdx(), sitemap(), tailwind()],
   output: "server",
-  adapter: node({
-    mode: "standalone"
-  })
+  adapter: cloudflare()
 });
