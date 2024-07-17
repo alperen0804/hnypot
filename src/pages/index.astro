@@ -3,7 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
-import profilePicture from '/hnypot.png';
+//import profilePicture from '../hnypot.png';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -17,7 +17,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 		<Header />
 		<main>
 			<div class="flex justify-center items-center select-none pointer-events-none">
-				<Image src={profilePicture} alt="Profile Picture" class="w-24 md:w-32 lg:w-50 select-none pointer-events-none">
+				<!--<Image src={profilePicture} alt="Profile Picture" class="w-24 md:w-32 lg:w-50 select-none pointer-events-none">-->
+				<img src="/hnypot.png" alt="Profile Picture" class="w-24 md:w-32 lg:w-50 select-none pointer-events-none">
 			</div>
 			<div class="text-center pt-12">
 				<h2>Hi, I'm <txt class="hnypot" style="background: #DB6F02;background:linear-gradient(to right, #DB6F02 0%, #FF9624 50%, #FFB825 100%); 
