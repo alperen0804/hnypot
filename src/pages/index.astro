@@ -1,9 +1,5 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { Image } from 'astro:assets';
-//import profilePicture from '../hnypot.png';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -14,10 +10,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	</head>
 	<body>
 		<div class="main"></div>
-		<Header />
 		<main>
 			<div class="flex justify-center items-center select-none pointer-events-none">
-				<!--<Image src={profilePicture} alt="Profile Picture" class="w-24 md:w-32 lg:w-50 select-none pointer-events-none">-->
 				<img src="/hnypot.png" alt="Profile Picture" class="w-24 md:w-32 lg:w-50 select-none pointer-events-none">
 			</div>
 			<div class="text-center pt-12">
@@ -33,17 +27,73 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				Currently working as a software developer, planning to study computer science at <a href="https://www.fhnw.ch/en/" target="_blank" class="text-blue-900">FHNW</a> 
 				(University of Applied Sciences) in Fall 2025.
 			</p>
-			<p>💡Open for a part-time job (as of August 2025) as a software developer to finance my studies <i>and</i> to gain <i>even more</i> experience at the same time. 🧠</p>
+			<p>💡Open for a part-time job (as of August 2025) as a software developer to finance my studies and to gain more work experience at the same time.</p>
 			<hr class="py-3">
-			<h4>Projects</h4>
-			<p>incoming...</p>
-			<hr class="py-3">
-			<h4>Blog</h4>
-			<p>incoming...</p>
+			<h4>Selected projects (4)</h4>
+			<div>
+				<a class="flex flex-col p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+					<h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Malbox - Advanced Sandboxing Solution (Soon public!)</h5>
+					<p class="text-gray-700 dark:text-gray-400">Written in Rust (Contributor)</p>
+				</a>
+			</div>
+			<br>
+			<div>
+				<a href="https://github.com/hnypot/autohaus" target="_blank" class="flex flex-col p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+					<h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Car Dealership WebApp</h5>
+					<p class="text-gray-700 dark:text-gray-400">Written in ASP.NET 6 & SQL-Server</p>
+					<div class="text-sm font-medium text-blue-500 flex items-center">
+						<svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2C6.48 2 2 6.48 2 12c0 4.418 2.865 8.166 6.84 
+							9.489.5.09.682-.216.682-.481 0-.237-.008-.866-.013-1.699-2.782.605-3.369-1.343-3.369-1.343-.454-1.152-1.11-1.46-1.11-1.46-.91-.622.069-.609.069-.609 
+							1.004.07 1.533 1.032 1.533 1.032.892 1.528 2.341 1.087 2.91.832.092-.647.35-1.086.636-1.335-2.22-.252-4.555-1.11-4.555-4.943 0-1.092.39-1.985 
+							1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.565 9.565 0 0112 6.845c.852.004 1.71.115 2.513.338 1.91-1.294 2.75-1.025 
+							2.75-1.025.545 1.376.202 2.393.1 2.646.64.698 1.028 1.591 1.028 2.683 0 3.843-2.338 4.687-4.566 4.933.359.309.68.92.68 1.855 0 1.339-.012 
+							2.42-.012 2.75 0 .267.18.576.688.478A10.015 10.015 0 0022 12c0-5.52-4.48-10-10-10z"/>
+						</svg>
+						Click to view on GitHub
+					</div>
+				</a>
+			</div>
+			<br>
+			<div>
+				<a href="https://github.com/hnypot/pong" target="_blank" class="flex flex-col p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+					<h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">Pong - Terminal-based Game</h5>
+					<p class="text-gray-700 dark:text-gray-400">Written in Java</p>
+					<div class="text-sm font-medium text-blue-500 flex items-center">
+						<svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2C6.48 2 2 6.48 2 12c0 4.418 2.865 8.166 6.84 
+							9.489.5.09.682-.216.682-.481 0-.237-.008-.866-.013-1.699-2.782.605-3.369-1.343-3.369-1.343-.454-1.152-1.11-1.46-1.11-1.46-.91-.622.069-.609.069-.609 
+							1.004.07 1.533 1.032 1.533 1.032.892 1.528 2.341 1.087 2.91.832.092-.647.35-1.086.636-1.335-2.22-.252-4.555-1.11-4.555-4.943 0-1.092.39-1.985 
+							1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.565 9.565 0 0112 6.845c.852.004 1.71.115 2.513.338 1.91-1.294 2.75-1.025 
+							2.75-1.025.545 1.376.202 2.393.1 2.646.64.698 1.028 1.591 1.028 2.683 0 3.843-2.338 4.687-4.566 4.933.359.309.68.92.68 1.855 0 1.339-.012 
+							2.42-.012 2.75 0 .267.18.576.688.478A10.015 10.015 0 0022 12c0-5.52-4.48-10-10-10z"/>
+						</svg>
+						Click to view on GitHub
+					</div>
+				</a>
+			</div>
+			<br>
+			<div>
+				<a href="https://github.com/hnypot/modul-183" target="_blank" class="flex flex-col p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+					<h5 class="mb-2 font-bold tracking-tight text-gray-900 dark:text-white">modul-183 - Secure Authentication WebApp</h5>
+					<p class="text-gray-700 dark:text-gray-400">Written in PHP 8.2 & MySQL</p>
+					<div class="text-sm font-medium text-blue-500 flex items-center">
+						<svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2C6.48 2 2 6.48 2 12c0 4.418 2.865 8.166 6.84 
+							9.489.5.09.682-.216.682-.481 0-.237-.008-.866-.013-1.699-2.782.605-3.369-1.343-3.369-1.343-.454-1.152-1.11-1.46-1.11-1.46-.91-.622.069-.609.069-.609 
+							1.004.07 1.533 1.032 1.533 1.032.892 1.528 2.341 1.087 2.91.832.092-.647.35-1.086.636-1.335-2.22-.252-4.555-1.11-4.555-4.943 0-1.092.39-1.985 
+							1.029-2.683-.103-.253-.446-1.27.098-2.646 0 0 .84-.269 2.75 1.025A9.565 9.565 0 0112 6.845c.852.004 1.71.115 2.513.338 1.91-1.294 2.75-1.025 
+							2.75-1.025.545 1.376.202 2.393.1 2.646.64.698 1.028 1.591 1.028 2.683 0 3.843-2.338 4.687-4.566 4.933.359.309.68.92.68 1.855 0 1.339-.012 
+							2.42-.012 2.75 0 .267.18.576.688.478A10.015 10.015 0 0022 12c0-5.52-4.48-10-10-10z"/>
+						</svg>
+						Click to view on GitHub
+					</div>
+				</a>
+			</div>
+			<br>
 			<hr class="py-3">
 			<h4>Get in touch</h4>
 			<a href="mailto:contact@hnypot.dev" target="_blank" class="text-blue-900">contact@hnypot.dev</a>
 		</main>
-		<Footer />
 	</body>
 </html>
