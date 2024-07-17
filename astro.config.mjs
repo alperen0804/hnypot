@@ -10,6 +10,9 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: 'https://hnypot.dev',
   integrations: [mdx(), sitemap(), tailwind()],
+  adapter: cloudflare({
+    imageService: 'compile'
+  }),
   output: "server",
   adapter: cloudflare()
 });
